@@ -10,7 +10,6 @@ public class PlayerVRManager : MonoBehaviour
     
     [Header("VR")]
     [SerializeField] private GameObject _vrParent;
-    [SerializeField] private CharacterControllerDriver _vrDriver;
     
     private bool _vrModeEnabled = false;
 
@@ -31,7 +30,6 @@ public class PlayerVRManager : MonoBehaviour
     {
         _vrModeEnabled = VRManager.Instance.IsVRActive;
         _vrParent.SetActive(_vrModeEnabled);
-        _vrDriver.enabled = _vrModeEnabled;
         _desktopParent.SetActive(!_vrModeEnabled);
     }
 
