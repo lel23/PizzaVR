@@ -8,15 +8,15 @@ public class Shooter : MonoBehaviour
     public GameObject rayOrigin;
     public GameObject destinationPrefab;
 
-    
-    
-    private void Start()
+    public void FireShooter()
     {
+        RaycastHit hit;
         
-    }
-    
-    private void Update()
-    {
-        
+        if (!Physics.Raycast(rayOrigin.transform.position, -rayOrigin.transform.forward, out hit))
+        {
+            return;
+        }
+
+        Instantiate(destinationPrefab, hit.point, Quaternion.identity);
     }
 }
