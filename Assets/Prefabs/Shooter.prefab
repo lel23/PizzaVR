@@ -175,6 +175,8 @@ MonoBehaviour:
   rayOrigin: {fileID: 6304795341451994985}
   destinationPrefab: {fileID: 4045528294640311023, guid: 26dd73136953751449891db207145d79,
     type: 3}
+  initialPrefab: {fileID: 2939485378464958897, guid: 961b91b18ccd6af429a8b4539d0dbd23,
+    type: 3}
 --- !u!54 &1074351523162697028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -255,7 +257,19 @@ MonoBehaviour:
         m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6669497199327440503}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: ReleaseShooter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
