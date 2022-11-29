@@ -55,22 +55,8 @@ public class GrappleController : MonoBehaviour
         }
         
         //Only disable turning if right is locked
-        if (rightShooter.shooterState == Shooter.ShooterState.Locked)
-        {
-            turnProvider.enabled = false;
-        }
-        else
-        {
-            turnProvider.enabled = true;
-        }
-        if (_playerLocked)
-        {
-            moveProvider.enabled = false;
-        }
-        else
-        {
-            moveProvider.enabled = true;
-        }
+        turnProvider.enabled = rightShooter.shooterState != Shooter.ShooterState.Locked;
+        moveProvider.enabled = !_playerLocked;
 
         _rigidBody.useGravity = !_playerLocked;
     }
