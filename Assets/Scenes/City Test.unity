@@ -1248,6 +1248,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1265385243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &781043606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781043599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa685c2e5493e1942bcc933be1b8c1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1969027904}
+  grabbableMask:
+    serializedVersion: 2
+    m_Bits: 64
+  grabMaxDistance: 6
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
+      propertyPath: maxLookAngle
+      value: 79.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36,
+        type: 3}
       propertyPath: enableHeadBob
       value: 0
       objectReference: {fileID: 0}
@@ -2617,6 +2639,24 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+--- !u!1 &1774189568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5787048058439009222, guid: 2f380940653a1cd459857281cf91beea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1355739035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1774189573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774189568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf43911b30950ff4e89e38d80dd65591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1956310433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,6 +2698,12 @@ Transform:
 --- !u!1 &1969027902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265385243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1969027904 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36,
     type: 3}
   m_PrefabInstance: {fileID: 1265385243}
   m_PrefabAsset: {fileID: 0}

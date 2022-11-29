@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610889405963075861}
   - component: {fileID: 8501739782302392692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7049163778617424481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttachTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3165438623129708103}
   - component: {fileID: 4850662097910967462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Colider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6669497199327440503}
   - component: {fileID: 1074351523162697028}
   - component: {fileID: 7145298069605809800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5661251225823939492}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RayOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 7732378418084983370}
   - component: {fileID: 5221447108031828156}
   - component: {fileID: 4346776687168246417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: blasterL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
