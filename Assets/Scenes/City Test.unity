@@ -867,6 +867,7 @@ GameObject:
   - component: {fileID: 665706795}
   - component: {fileID: 665706798}
   - component: {fileID: 665706797}
+  - component: {fileID: 665706799}
   m_Layer: 7
   m_Name: VR
   m_TagString: Untagged
@@ -942,6 +943,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &665706799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665706794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe061e564df7e84aa925622f9137df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightShooter: {fileID: 774171952}
+  leftShooter: {fileID: 1202310137}
+  moveProvider: {fileID: 1443264353}
+  turnProvider: {fileID: 1443264352}
 --- !u!1 &774171946
 GameObject:
   m_ObjectHideFlags: 0

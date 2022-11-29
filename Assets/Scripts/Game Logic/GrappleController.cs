@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class GrappleController : MonoBehaviour
 {
@@ -9,13 +10,31 @@ public class GrappleController : MonoBehaviour
     public Shooter rightShooter;
     public Shooter leftShooter;
 
-    [Header("Visualization")] 
-    public GameObject destinationMarkPrefab;
-    public GameObject originMarkPrefab;
+    [Header("Motion")]
+    public ContinuousMoveProviderBase moveProvider;
+    public ContinuousTurnProviderBase turnProvider;
 
-    private GameObject destinationObjectLeft;
-    private GameObject destinationObjectRight;
+    private bool _playerLocked = false;
 
-    private GameObject originObjectLeft;
-    private GameObject originObjectRight;
+    private void Update()
+    {
+        _playerLocked = rightShooter.shooterState == Shooter.ShooterState.Locked || leftShooter.shooterState == Shooter.ShooterState.Locked;
+        
+        //Only disable turning if right is locked
+        if (rightShooter.shooterState == Shooter.ShooterState.Locked)
+        {
+            turnProvider.enabled = false;
+        }
+        
+        if (_playerLocked)
+        {
+            moveProvider.enabled = false;
+        }
+        
+        if (!_playerLocked)
+        {
+            moveProvider.enabled = true;
+            turnProvider.enabled = true;
+        }
+    }
 }
