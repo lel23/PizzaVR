@@ -8,12 +8,13 @@ public class Shooter : MonoBehaviour
     public GameObject rayOrigin;
     public GameObject destinationPrefab;
     public GameObject initialPrefab;
+    public LayerMask attachableLayers;
     
     public void FireShooter()
     {
         RaycastHit hit;
         
-        if (!Physics.Raycast(rayOrigin.transform.position, -rayOrigin.transform.forward, out hit))
+        if (!Physics.Raycast(rayOrigin.transform.position, rayOrigin.transform.forward, out hit, attachableLayers))
         {
             return;
         }
