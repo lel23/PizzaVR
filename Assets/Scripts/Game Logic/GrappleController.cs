@@ -16,7 +16,8 @@ public class GrappleController : MonoBehaviour
     
     [Header("Motion References")]
     public ContinuousMoveProviderBase moveProvider;
-    public ContinuousTurnProviderBase turnProvider;
+    public ContinuousTurnProviderBase rightTurnProvider;
+    public ContinuousTurnProviderBase leftTurnProvider;
     
     private Rigidbody _rigidBody;
     
@@ -55,7 +56,9 @@ public class GrappleController : MonoBehaviour
         }
         
         //Only disable turning if right is locked
-        turnProvider.enabled = rightShooter.shooterState != Shooter.ShooterState.Locked;
+        rightTurnProvider.enabled = rightShooter.shooterState != Shooter.ShooterState.Locked;
+        leftTurnProvider.enabled = leftShooter.shooterState != Shooter.ShooterState.Locked && _playerLocked;
+
         moveProvider.enabled = !_playerLocked;
 
         _rigidBody.useGravity = !_playerLocked;

@@ -21,6 +21,7 @@ public class blimp : MonoBehaviour
         if (transform.position.x > _start.x + distance || transform.position.x < _start.x)
         {
             currentVel *= -1;
+            transform.position += new Vector3(currentVel * Time.deltaTime, 0 ,0);
         }
     }
 }
