@@ -10,7 +10,9 @@ public class Shooter : MonoBehaviour
     public GameObject initialPrefab;
     public LayerMask attachableLayers;
     public float maxRayDistance = 100f;
-    
+
+    [HideInInspector] public Vector2 JoystickValue { get; set; }
+
     public void FireShooter()
     {
         RaycastHit hit;
@@ -65,5 +67,4 @@ public class Shooter : MonoBehaviour
         Destroy(initialObject);
         initialLocked = false;
     }
-    
 }

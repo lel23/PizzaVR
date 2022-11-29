@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
@@ -18,6 +19,9 @@ public abstract class HandInput : MonoBehaviour
     public UnityEvent onGripUp;
     private bool _lastGripValue = false;
 
+    public UnityEvent<Vector2> onJoystickUpdate;
+    private Vector2 _lastJoystickValue;
+
     private InputDevice _controller;
     private bool _controllerIntialized = false;
 
@@ -28,7 +32,6 @@ public abstract class HandInput : MonoBehaviour
     {
         _desiredCharacteristics = inputCharacteristics;
         _initialized = true;
-        print("Initialized");
     }
 
     private bool AttachController()
@@ -39,7 +42,6 @@ public abstract class HandInput : MonoBehaviour
         if (controllers.Count == 1)
         {
             _controller = controllers[0];
-            print("Found controller");
             return _controllerIntialized = true;
         }
         
@@ -57,9 +59,7 @@ public abstract class HandInput : MonoBehaviour
         {
             return;
         }
-
         
-        print("Updating");
         bool triggerValue;
         
         //Try to get button press
@@ -103,5 +103,17 @@ public abstract class HandInput : MonoBehaviour
                 _lastGripValue = gripValue;
             }
         }
+        
+        Vector2 joystickValue;
+        if (_controller.TryGetFeatureValue(CommonUsages.primary2DAxis, out joystickValue))
+        {
+            //See if button has changed
+            if (!joystickValue.Equals(_lastJoystickValue))
+            {
+                onJoystickUpdate.Invoke(joystickValue);
+                _lastJoystickValue = joystickValue;
+            }
+        }
     }
+
 }

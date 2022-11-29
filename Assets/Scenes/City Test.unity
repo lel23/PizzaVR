@@ -867,6 +867,7 @@ GameObject:
   - component: {fileID: 665706795}
   - component: {fileID: 665706798}
   - component: {fileID: 665706797}
+  - component: {fileID: 665706799}
   m_Layer: 7
   m_Name: VR
   m_TagString: Untagged
@@ -942,6 +943,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &665706799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665706794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe061e564df7e84aa925622f9137df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHandShooter: {fileID: 774171952}
+  leftHandShooter: {fileID: 1202310137}
 --- !u!1 &774171946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1554,21 @@ MonoBehaviour:
   onGripUp:
     m_PersistentCalls:
       m_Calls: []
+  onJoystickUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774171952}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: set_JoystickValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &781043599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36,
@@ -1551,24 +1581,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1265385243}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &781043606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781043599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa685c2e5493e1942bcc933be1b8c1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1969027904}
-  grabbableMask:
-    m_Bits: 64
-  grabMaxDistance: 6
-  heldItem: {fileID: 0}
-  heldItemOldTransform: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2493,21 @@ MonoBehaviour:
   onGripUp:
     m_PersistentCalls:
       m_Calls: []
+  onJoystickUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202310137}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: set_JoystickValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1265385243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3297,12 +3324,6 @@ Transform:
 --- !u!1 &1969027902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36,
-    type: 3}
-  m_PrefabInstance: {fileID: 1265385243}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1969027904 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36,
     type: 3}
   m_PrefabInstance: {fileID: 1265385243}
   m_PrefabAsset: {fileID: 0}
