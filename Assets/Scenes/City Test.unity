@@ -961,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightShooter: {fileID: 774171952}
   leftShooter: {fileID: 1202310137}
-  grappleSpeed: 2
+  grappleSpeed: 6
   slowdownScale: 1
   moveProvider: {fileID: 1443264353}
   rightTurnProvider: {fileID: 1639382339}
