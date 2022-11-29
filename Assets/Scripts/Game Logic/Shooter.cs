@@ -35,7 +35,11 @@ public class Shooter : MonoBehaviour
 
         if (shooterState == ShooterState.Active && _activeLine != null)
         {
-            _activeLine.SetPosition(0, OriginCoords);
+            _activeLine.SetPosition(0, rayOrigin.transform.position);
+        }
+        if (shooterState == ShooterState.Locked && _lockedLine != null)
+        {
+            _lockedLine.SetPosition(0, rayOrigin.transform.position);
         }
         
         if (shooterState != ShooterState.Locked)
@@ -113,14 +117,14 @@ public class Shooter : MonoBehaviour
     #region Util
     //Checks if an axis is basically not moving - useful for seeing
     //if the user is trying to move or not
-    private bool IsAxisStill(Vector2 axis)
+    public static bool IsAxisStill(Vector2 axis)
     {
         return IsValueStill(axis.x) && IsValueStill(axis.y);
     }
 
     
     //Checks if a value is basically not moving
-    private bool IsValueStill(float a)
+    public static bool IsValueStill(float a)
     {
         return a <= 0.02f;
     }
