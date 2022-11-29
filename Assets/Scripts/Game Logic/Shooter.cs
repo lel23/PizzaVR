@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-
+    [Header("Config")]
     public GameObject rayOrigin;
-    public GameObject destinationPrefab;
-    public GameObject initialPrefab;
     public LayerMask attachableLayers;
     public float maxRayDistance = 100f;
 
+    [Header("Display")] 
+    public LineRenderer activeLinePrefab;
+    public LineRenderer lockedLinePrefab;
+    private LineRenderer _activeLine;
+    private LineRenderer _lockedLine;
     [HideInInspector] public Vector2 JoystickValue { get; set; }
+    [HideInInspector] public Vector3 DestinationCoords { get; set; }
+    [HideInInspector] public Vector3 OriginCoords { get; set;}
+    [HideInInspector] public ShooterState shooterState = ShooterState.Inactive;
 
+    public enum ShooterState
+    {
+        Inactive,
+        Active,
+        Locked
+    }
+    
+    private void Update()
+    {
+        if (shooterState == ShooterState.Active && !IsValueStill(JoystickValue.y))
+        {
+            LockShooter();
+        }
+
+        if (shooterState == ShooterState.Active && _activeLine != null)
+        {
+            _activeLine.SetPosition(0, OriginCoords);
+        }
+        
+        if (shooterState != ShooterState.Locked)
+        {
+            OriginCoords = rayOrigin.transform.position;    
+        }
+    }
+
+    #region Shooter Functions
     public void FireShooter()
     {
         RaycastHit hit;
@@ -21,50 +53,77 @@ public class Shooter : MonoBehaviour
         {
             return;
         }
-
-        ReleaseDestination();
-        destinationLocked = true;
-        destinationCoordinates = hit.point;
-        destinationObject = Instantiate(destinationPrefab, destinationCoordinates, Quaternion.identity);
         
-        
-        ReleaseInitial();
-        initialLocked = true;
-        initialCoordinates = transform.position;
-        initialObject = Instantiate(initialPrefab, initialCoordinates, Quaternion.identity);
+        DestinationCoords = hit.point;
+        ActivateShooter();
     }
 
     public void ReleaseShooter()
     {
-        ReleaseDestination();
-        ReleaseInitial();
-    }
-    
-    private Vector3 destinationCoordinates;
-    private GameObject destinationObject;
-    private bool destinationLocked = false;
+        ShooterState previousShooterState = shooterState;
+        if (previousShooterState == ShooterState.Active)
+        {
+            DeactivateShooter();
+        }
 
-    private void ReleaseDestination()
-    {
-        if (!destinationLocked)
+        if (previousShooterState == ShooterState.Locked)
         {
-            return;
+            UnlockShooter();
         }
-        Destroy(destinationObject);
-        destinationLocked = false;
+        shooterState = ShooterState.Inactive;
+    }
+
+    //Add/remove any activated visuals
+    public void ActivateShooter()
+    {
+        shooterState = ShooterState.Active;
+        _activeLine = Instantiate(activeLinePrefab, transform.position, Quaternion.identity)
+            .GetComponent<LineRenderer>();
+        _activeLine.SetPosition(0, OriginCoords);
+        _activeLine.SetPosition(1, DestinationCoords);
     }
     
-    private Vector3 initialCoordinates;
-    private GameObject initialObject;
-    private bool initialLocked = false;
-    
-    private void ReleaseInitial()
+    public void DeactivateShooter()
     {
-        if (!initialLocked)
-        {
-            return;
-        }
-        Destroy(initialObject);
-        initialLocked = false;
+        shooterState = ShooterState.Inactive;
+        Destroy(_activeLine.gameObject);
+        _activeLine = null;
     }
+    
+    //Add and remove any locked visuals
+    public void LockShooter()
+    {
+        DeactivateShooter();
+        shooterState = ShooterState.Locked;
+        _lockedLine = Instantiate(lockedLinePrefab, transform.position, Quaternion.identity)
+            .GetComponent<LineRenderer>();
+        _lockedLine.SetPosition(0, OriginCoords);
+        _lockedLine.SetPosition(1, DestinationCoords);
+    }
+
+    public void UnlockShooter()
+    {
+        shooterState = ShooterState.Inactive;
+        Destroy(_lockedLine.gameObject);
+        _lockedLine = null;
+    }
+
+    #endregion
+
+    #region Util
+    //Checks if an axis is basically not moving - useful for seeing
+    //if the user is trying to move or not
+    private bool IsAxisStill(Vector2 axis)
+    {
+        return IsValueStill(axis.x) && IsValueStill(axis.y);
+    }
+
+    
+    //Checks if a value is basically not moving
+    private bool IsValueStill(float a)
+    {
+        return a <= 0.02f;
+    }
+    #endregion
+    
 }

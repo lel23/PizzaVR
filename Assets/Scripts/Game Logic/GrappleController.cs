@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class GrappleController : MonoBehaviour
 {
-    public Shooter rightHandShooter;
-    public Shooter leftHandShooter;
+    [Header("Shooters")]
+    public Shooter rightShooter;
+    public Shooter leftShooter;
 
-    private void Update()
-    {
-        print("Right: " + rightHandShooter.JoystickValue);
-        print("Left: " + leftHandShooter.JoystickValue);
-    }
+    [Header("Visualization")] 
+    public GameObject destinationMarkPrefab;
+    public GameObject originMarkPrefab;
+
+    private GameObject destinationObjectLeft;
+    private GameObject destinationObjectRight;
+
+    private GameObject originObjectLeft;
+    private GameObject originObjectRight;
 }

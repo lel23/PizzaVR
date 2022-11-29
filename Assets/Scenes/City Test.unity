@@ -867,7 +867,6 @@ GameObject:
   - component: {fileID: 665706795}
   - component: {fileID: 665706798}
   - component: {fileID: 665706797}
-  - component: {fileID: 665706799}
   m_Layer: 7
   m_Name: VR
   m_TagString: Untagged
@@ -943,20 +942,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &665706799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665706794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe061e564df7e84aa925622f9137df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightHandShooter: {fileID: 774171952}
-  leftHandShooter: {fileID: 1202310137}
 --- !u!1 &774171946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,14 +1483,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayOrigin: {fileID: 1420702372}
-  destinationPrefab: {fileID: 4045528294640311023, guid: 26dd73136953751449891db207145d79,
-    type: 3}
-  initialPrefab: {fileID: 2939485378464958897, guid: 961b91b18ccd6af429a8b4539d0dbd23,
-    type: 3}
   attachableLayers:
     serializedVersion: 2
     m_Bits: 256
   maxRayDistance: 100
+  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
+    type: 3}
+  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
+    type: 3}
+  shooterState: 0
 --- !u!114 &774171953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,14 +2407,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayOrigin: {fileID: 1405340273}
-  destinationPrefab: {fileID: 4045528294640311023, guid: 26dd73136953751449891db207145d79,
-    type: 3}
-  initialPrefab: {fileID: 2939485378464958897, guid: 961b91b18ccd6af429a8b4539d0dbd23,
-    type: 3}
   attachableLayers:
     serializedVersion: 2
     m_Bits: 256
   maxRayDistance: 100
+  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
+    type: 3}
+  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
+    type: 3}
+  shooterState: 0
 --- !u!54 &1202310138
 Rigidbody:
   m_ObjectHideFlags: 0
