@@ -15,7 +15,8 @@ public class Shooter : MonoBehaviour
     private LineRenderer _activeLine;
     private LineRenderer _lockedLine;
     [HideInInspector] public Vector2 JoystickValue { get; set; }
-    [HideInInspector] public Vector3 DestinationCoords { get; set; }
+    //[HideInInspector] public Vector3 DestinationCoords { get; set; }
+    [HideInInspector] public GameObject DestinationMarker { get; set; }
     [HideInInspector] public Vector3 OriginCoords { get; set;}
     [HideInInspector] public ShooterState shooterState = ShooterState.Inactive;
 
@@ -36,10 +37,13 @@ public class Shooter : MonoBehaviour
         if (shooterState == ShooterState.Active && _activeLine != null)
         {
             _activeLine.SetPosition(0, rayOrigin.transform.position);
+            _activeLine.SetPosition(1, DestinationMarker.transform.position);
         }
+        
         if (shooterState == ShooterState.Locked && _lockedLine != null)
         {
             _lockedLine.SetPosition(0, rayOrigin.transform.position);
+            _lockedLine.SetPosition(1, DestinationMarker.transform.position);
         }
         
         if (shooterState != ShooterState.Locked)
@@ -57,8 +61,15 @@ public class Shooter : MonoBehaviour
         {
             return;
         }
-        
-        DestinationCoords = hit.point;
+
+        if (DestinationMarker != null)
+        {
+            Destroy(DestinationMarker);
+        }
+
+        DestinationMarker = new GameObject();
+        DestinationMarker.transform.parent = hit.collider.transform;
+        DestinationMarker.transform.localPosition = hit.collider.transform.InverseTransformPoint(hit.point);
         ActivateShooter();
     }
 
@@ -84,7 +95,7 @@ public class Shooter : MonoBehaviour
         _activeLine = Instantiate(activeLinePrefab, transform.position, Quaternion.identity)
             .GetComponent<LineRenderer>();
         _activeLine.SetPosition(0, OriginCoords);
-        _activeLine.SetPosition(1, DestinationCoords);
+        _activeLine.SetPosition(1, DestinationMarker.transform.position);
     }
     
     public void DeactivateShooter()
@@ -102,7 +113,7 @@ public class Shooter : MonoBehaviour
         _lockedLine = Instantiate(lockedLinePrefab, transform.position, Quaternion.identity)
             .GetComponent<LineRenderer>();
         _lockedLine.SetPosition(0, OriginCoords);
-        _lockedLine.SetPosition(1, DestinationCoords);
+        _lockedLine.SetPosition(1, DestinationMarker.transform.position);
     }
 
     public void UnlockShooter()

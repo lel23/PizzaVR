@@ -80,12 +80,12 @@ public class GrappleController : MonoBehaviour
         
         if (rightShooter.shooterState == Shooter.ShooterState.Locked)
         {
-            grappleDirection  = rightShooter.DestinationCoords - rightShooter.OriginCoords;
+            grappleDirection  = rightShooter.DestinationMarker.transform.position - rightShooter.rayOrigin.transform.position;
             joystickInput = rightShooter.JoystickValue.y;
         }
         else
         {
-           grappleDirection = (leftShooter.DestinationCoords - leftShooter.OriginCoords).normalized;
+           grappleDirection = (leftShooter.DestinationMarker.transform.position - leftShooter.rayOrigin.transform.position).normalized;
            joystickInput = leftShooter.JoystickValue.y;
         }
         
