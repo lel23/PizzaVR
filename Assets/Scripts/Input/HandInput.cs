@@ -21,6 +21,8 @@ public abstract class HandInput : MonoBehaviour
     public UnityEvent<Vector2> onJoystickUpdate;
     private Vector2 _lastJoystickValue;
 
+    public UnityEvent<Vector3> controllerVelocityTracker;
+
     private InputDevice _controller;
     private bool _controllerIntialized = false;
 
@@ -113,6 +115,8 @@ public abstract class HandInput : MonoBehaviour
                 _lastJoystickValue = joystickValue;
             }
         }
+        
+        
     }
 
 }

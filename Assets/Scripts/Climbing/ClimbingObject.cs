@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClimbingObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public BoxCollider myCollider;
+    public LayerMask climbableLayerMask;
 
-    // Update is called once per frame
-    void Update()
+    private GameObject _overlapObject;
+
+    public void TryClimb()
     {
-        
+        Collider[] colliders = Physics.OverlapBox(myCollider.transform.position, myCollider.size/2.0f, myCollider.transform.rotation, climbableLayerMask);
+        if (colliders.Length == 0)
+        {
+            return;
+        }
+
+        _overlapObject = colliders[0].gameObject;
     }
 }
