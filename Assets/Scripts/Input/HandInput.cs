@@ -116,7 +116,11 @@ public abstract class HandInput : MonoBehaviour
             }
         }
         
-        
+        Vector3 controllerVelocity;
+        if (_controller.TryGetFeatureValue(CommonUsages.deviceVelocity, out controllerVelocity))
+        {
+            controllerVelocityTracker.Invoke(controllerVelocity);
+        }
     }
 
 }

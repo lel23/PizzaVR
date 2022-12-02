@@ -876,11 +876,12 @@ GameObject:
   m_Component:
   - component: {fileID: 665706796}
   - component: {fileID: 665706795}
-  - component: {fileID: 665706798}
-  - component: {fileID: 665706797}
   - component: {fileID: 665706799}
   - component: {fileID: 665706801}
   - component: {fileID: 665706800}
+  - component: {fileID: 665706802}
+  - component: {fileID: 665706804}
+  - component: {fileID: 665706803}
   m_Layer: 7
   m_Name: VR
   m_TagString: Untagged
@@ -925,39 +926,6 @@ Transform:
   m_Father: {fileID: 1145399728}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &665706797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665706794}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 1443264350}
-  m_MinHeight: 1
-  m_MaxHeight: 2
---- !u!143 &665706798
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665706794}
-  m_Material: {fileID: 13400000, guid: d1c97326931a26448b7f16910f44321d, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &665706799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,13 +938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe061e564df7e84aa925622f9137df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightShooter: {fileID: 774171952}
-  leftShooter: {fileID: 1202310137}
+  rightShooter: {fileID: 774171955}
+  leftShooter: {fileID: 1202310141}
   grappleSpeed: 6
-  slowdownScale: 1
-  moveProvider: {fileID: 1443264353}
-  rightTurnProvider: {fileID: 1639382339}
-  leftTurnProvider: {fileID: 1320399922}
+  playerController: {fileID: 665706803}
 --- !u!136 &665706800
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1007,6 +972,140 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &665706802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665706794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbaf55c1a6268c478160f4b005adaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftController: {fileID: 1202310140}
+  rightController: {fileID: 774171954}
+  myRigidbody: {fileID: 665706801}
+--- !u!114 &665706803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665706794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0e54c9031e9904e9b8791744d38167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveProvider: {fileID: 1443264353}
+  rightTurnProvider: {fileID: 1639382339}
+  leftTurnProvider: {fileID: 1320399922}
+  myRigidBody: {fileID: 665706801}
+  lockedVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &665706804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665706794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ed5d79cff5797449c2968c7d60c988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlayerLocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665706803}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPlayerLocked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPlayerUnlocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665706803}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPlayerUnlocked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRightHandLocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774171955}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: DisableShooter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRightHandUnlocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774171955}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: EnableShooter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLeftHandLocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202310141}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: DisableShooter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLeftHandUnlocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202310141}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: EnableShooter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &774171946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,9 +1117,9 @@ GameObject:
   - component: {fileID: 774171947}
   - component: {fileID: 774171950}
   - component: {fileID: 774171951}
-  - component: {fileID: 774171952}
   - component: {fileID: 774171953}
   - component: {fileID: 774171954}
+  - component: {fileID: 774171955}
   m_Layer: 7
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1329,28 +1428,6 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &774171952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774171946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63b7ff9a1f18394ab7675dae5fa4fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayOrigin: {fileID: 1420702372}
-  attachableLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  maxRayDistance: 100
-  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
-    type: 3}
-  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
-    type: 3}
-  shooterState: 0
 --- !u!114 &774171953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,8 +1443,8 @@ MonoBehaviour:
   onTriggerDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 774171952}
-        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+      - m_Target: {fileID: 774171955}
+        m_TargetAssemblyTypeName: RightShooter, Assembly-CSharp
         m_MethodName: FireShooter
         m_Mode: 1
         m_Arguments:
@@ -1381,8 +1458,8 @@ MonoBehaviour:
   onTriggerUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 774171952}
-        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+      - m_Target: {fileID: 774171955}
+        m_TargetAssemblyTypeName: RightShooter, Assembly-CSharp
         m_MethodName: ReleaseShooter
         m_Mode: 1
         m_Arguments:
@@ -1410,13 +1487,40 @@ MonoBehaviour:
         m_CallState: 2
   onGripUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 774171954}
+        m_TargetAssemblyTypeName: ClimbingObject, Assembly-CSharp
+        m_MethodName: ReleaseClimb
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onJoystickUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 774171952}
+      - m_Target: {fileID: 774171955}
         m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
         m_MethodName: set_JoystickValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  controllerVelocityTracker:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774171954}
+        m_TargetAssemblyTypeName: ClimbingObject, Assembly-CSharp
+        m_MethodName: set_DeviceVelocity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1438,10 +1542,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0413dab54cd63043a283eb9bcebf087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHand: {fileID: 1420702372}
   myCollider: {fileID: 509220507}
   climbableLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  isLocked: 0
+--- !u!114 &774171955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774171946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce48cd9821f2fee4caee9971e85692c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayOrigin: {fileID: 1420702372}
+  attachableLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  maxRayDistance: 100
+  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
+    type: 3}
+  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
+    type: 3}
+  playerController: {fileID: 665706803}
+  shooterState: 0
 --- !u!1 &781043599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36,
@@ -1586,7 +1715,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003117545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f28cd547c4d33d14aaf784e2fea6eed8, type: 3}
   m_Name: 
@@ -1728,7 +1857,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145399726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caed9628233edc947abbeb756d426192, type: 3}
   m_Name: 
@@ -1763,9 +1892,9 @@ GameObject:
   - component: {fileID: 1202310132}
   - component: {fileID: 1202310136}
   - component: {fileID: 1202310135}
-  - component: {fileID: 1202310137}
   - component: {fileID: 1202310139}
   - component: {fileID: 1202310140}
+  - component: {fileID: 1202310141}
   m_Layer: 7
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -2074,28 +2203,6 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &1202310137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202310131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63b7ff9a1f18394ab7675dae5fa4fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayOrigin: {fileID: 1405340273}
-  attachableLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  maxRayDistance: 100
-  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
-    type: 3}
-  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
-    type: 3}
-  shooterState: 0
 --- !u!114 &1202310139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,8 +2218,8 @@ MonoBehaviour:
   onTriggerDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1202310137}
-        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+      - m_Target: {fileID: 1202310141}
+        m_TargetAssemblyTypeName: LeftShooter, Assembly-CSharp
         m_MethodName: FireShooter
         m_Mode: 1
         m_Arguments:
@@ -2126,8 +2233,8 @@ MonoBehaviour:
   onTriggerUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1202310137}
-        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+      - m_Target: {fileID: 1202310141}
+        m_TargetAssemblyTypeName: LeftShooter, Assembly-CSharp
         m_MethodName: ReleaseShooter
         m_Mode: 1
         m_Arguments:
@@ -2155,13 +2262,40 @@ MonoBehaviour:
         m_CallState: 2
   onGripUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1202310140}
+        m_TargetAssemblyTypeName: ClimbingObject, Assembly-CSharp
+        m_MethodName: ReleaseClimb
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onJoystickUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1202310137}
+      - m_Target: {fileID: 1202310141}
         m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
         m_MethodName: set_JoystickValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  controllerVelocityTracker:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202310140}
+        m_TargetAssemblyTypeName: ClimbingObject, Assembly-CSharp
+        m_MethodName: set_DeviceVelocity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2183,10 +2317,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0413dab54cd63043a283eb9bcebf087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myHand: {fileID: 1405340273}
   myCollider: {fileID: 1310847964}
   climbableLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  isLocked: 0
+--- !u!114 &1202310141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202310131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b22788f83eded49bd61ac6dae79d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayOrigin: {fileID: 1405340273}
+  attachableLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  maxRayDistance: 100
+  activeLinePrefab: {fileID: 9173500202343492240, guid: 7b1be3aff3311e449b232bb0bd970e80,
+    type: 3}
+  lockedLinePrefab: {fileID: 9173500202343492240, guid: c654f76320967c2448f40790fd720cde,
+    type: 3}
+  playerController: {fileID: 665706803}
+  shooterState: 0
 --- !u!1001 &1265385243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2275,6 +2434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850190357393, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}

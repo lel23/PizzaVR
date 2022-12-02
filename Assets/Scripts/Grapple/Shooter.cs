@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shooter : MonoBehaviour
 {
@@ -14,19 +15,25 @@ public class Shooter : MonoBehaviour
     public LineRenderer lockedLinePrefab;
     private LineRenderer _activeLine;
     private LineRenderer _lockedLine;
+
+    [Header("Player Controller")] public PlayerController playerController;
     [HideInInspector] public Vector2 JoystickValue { get; set; }
     //[HideInInspector] public Vector3 DestinationCoords { get; set; }
     [HideInInspector] public GameObject DestinationMarker { get; set; }
     [HideInInspector] public Vector3 OriginCoords { get; set;}
     [HideInInspector] public ShooterState shooterState = ShooterState.Inactive;
 
+    protected bool _shooterHasLock = false;
+
     public enum ShooterState
     {
         Inactive,
         Active,
-        Locked
+        Locked,
+        Disabled
     }
-    
+
+    #region Update
     private void Update()
     {
         if (shooterState == ShooterState.Active && !IsValueStill(JoystickValue.y))
@@ -51,10 +58,18 @@ public class Shooter : MonoBehaviour
             OriginCoords = rayOrigin.transform.position;    
         }
     }
+    
 
+    #endregion
+    
     #region Shooter Functions
-    public void FireShooter()
+    public virtual void FireShooter()
     {
+        if (shooterState == ShooterState.Disabled)
+        {
+            return;
+        }
+        
         RaycastHit hit;
         
         if (!Physics.Raycast(rayOrigin.transform.position, rayOrigin.transform.forward, out hit, maxRayDistance, attachableLayers))
@@ -67,14 +82,19 @@ public class Shooter : MonoBehaviour
             Destroy(DestinationMarker);
         }
 
+        _shooterHasLock = true;
         DestinationMarker = new GameObject();
         DestinationMarker.transform.parent = hit.collider.transform;
         DestinationMarker.transform.localPosition = hit.collider.transform.InverseTransformPoint(hit.point);
         ActivateShooter();
     }
 
-    public void ReleaseShooter()
+    public virtual void ReleaseShooter()
     {
+        if (!_shooterHasLock)
+        {
+            return;
+        }
         ShooterState previousShooterState = shooterState;
         if (previousShooterState == ShooterState.Active)
         {
@@ -121,6 +141,16 @@ public class Shooter : MonoBehaviour
         shooterState = ShooterState.Inactive;
         Destroy(_lockedLine.gameObject);
         _lockedLine = null;
+    }
+
+    public void DisableShooter()
+    {
+        shooterState = ShooterState.Disabled;
+    }
+
+    public void EnableShooter()
+    {
+        shooterState = ShooterState.Inactive;
     }
 
     #endregion
