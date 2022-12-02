@@ -16,7 +16,7 @@ public class ClimbingObject : MonoBehaviour
     [HideInInspector] public bool isLocked = false;
 
     protected bool _objectHasLock = false;
-
+    
     public virtual void TryClimb()
     {
         Collider[] colliders = Physics.OverlapBox(myCollider.transform.position, myCollider.size/2.0f, myCollider.transform.rotation, climbableLayerMask);
@@ -27,8 +27,6 @@ public class ClimbingObject : MonoBehaviour
 
         _overlapObject = colliders[0].gameObject;
         isLocked = true;
-        
-        myHand.transform.parent = null;
     }
 
     public virtual void ReleaseClimb()
@@ -38,9 +36,5 @@ public class ClimbingObject : MonoBehaviour
             return;
         }
         isLocked = false;
-        
-        myHand.transform.parent = transform;
-        myHand.transform.localPosition = Vector3.zero;
-        myHand.transform.localRotation = Quaternion.identity;
     }
 }
