@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         myRigidBody.useGravity = false;
         moveProvider.enabled = false;
+        leftTurnProvider.enabled = true;
     }
     
     public void OnPlayerUnlocked()
@@ -45,36 +46,22 @@ public class PlayerController : MonoBehaviour
 
     public void OnLeftHandLock()
     {
-        leftTurnProvider.enabled = false;
         OnPlayerLocked();
     }
 
     public void OnLeftHandUnlock()
     {
-        if (PlayerLocks.Instance.IsRightHandLocked)
-        {
-            leftTurnProvider.enabled = true;
-        }
-        else
-        {
-            leftTurnProvider.enabled = false;
-        }
+        
     }
 
     public void OnRightHandLock()
     {
-        rightTurnProvider.enabled = false;
-        if (!PlayerLocks.Instance.IsLeftHandLocked)
-        {
-            leftTurnProvider.enabled = true;
-        }
         OnPlayerLocked();
     }
 
     public void OnRightHandUnlock()
     {
-        rightTurnProvider.enabled = true;
-        leftTurnProvider.enabled = false;
+        
     }
 
     #endregion
