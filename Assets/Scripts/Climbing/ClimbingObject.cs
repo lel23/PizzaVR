@@ -13,9 +13,11 @@ public class ClimbingObject : MonoBehaviour
     public Vector3 DeviceVelocity { get; set; } = Vector3.zero;
 
     private GameObject _overlapObject;
-    public bool isLocked = false;
-    
-    public void TryClimb()
+    [HideInInspector] public bool isLocked = false;
+
+    protected bool _objectHasLock = false;
+
+    public virtual void TryClimb()
     {
         Collider[] colliders = Physics.OverlapBox(myCollider.transform.position, myCollider.size/2.0f, myCollider.transform.rotation, climbableLayerMask);
         if (colliders.Length == 0)
@@ -29,8 +31,12 @@ public class ClimbingObject : MonoBehaviour
         myHand.transform.parent = null;
     }
 
-    public void ReleaseClimb()
+    public virtual void ReleaseClimb()
     {
+        if (!isLocked)
+        {
+            return;
+        }
         isLocked = false;
         
         myHand.transform.parent = transform;

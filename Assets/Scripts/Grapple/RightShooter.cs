@@ -8,6 +8,8 @@ public class RightShooter: Shooter
         {
             return;
         }
+
+        _shooterHasLock = true;
         EnableShooter();
         base.FireShooter();
     }

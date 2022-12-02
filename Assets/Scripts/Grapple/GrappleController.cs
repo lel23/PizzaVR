@@ -25,10 +25,15 @@ public class GrappleController : MonoBehaviour
            _grappleHoldsLock = PlayerLocks.Instance.LockPlayer();
         }
 
-        if (_grappleHoldsLock && rightShooter.shooterState != Shooter.ShooterState.Locked && leftShooter.shooterState != Shooter.ShooterState.Locked)
+        if (rightShooter.shooterState != Shooter.ShooterState.Locked && leftShooter.shooterState != Shooter.ShooterState.Locked)
         {
-            PlayerLocks.Instance.UnlockPlayer();
-            _grappleHoldsLock = false;
+            if (_grappleHoldsLock)
+            {
+                PlayerLocks.Instance.UnlockPlayer();
+                _grappleHoldsLock = false;    
+            }
+
+            return;
         }
 
         Vector3 grappleForceRight = Vector3.zero;

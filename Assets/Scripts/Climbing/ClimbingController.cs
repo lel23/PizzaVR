@@ -5,14 +5,26 @@ public class ClimbingController : MonoBehaviour
     public ClimbingObject leftController;
     public ClimbingObject rightController;
 
-    public Rigidbody myRigidbody;
+    public PlayerController playerController;
 
+    private bool _climbingControllerHoldsLock;
     private void Update()
     {
-        if (!leftController.isLocked && !rightController.isLocked)
+        if (!_climbingControllerHoldsLock && (rightController.isLocked || leftController.isLocked))
         {
+            _climbingControllerHoldsLock = PlayerLocks.Instance.LockPlayer();
+        }
+
+        if (!rightController.isLocked && !leftController.isLocked)
+        {
+            if (_climbingControllerHoldsLock)
+            {
+                PlayerLocks.Instance.UnlockPlayer();
+                _climbingControllerHoldsLock = false;    
+            }
             return;
         }
+        
         Vector3 velocity = Vector3.zero;
         if (leftController.isLocked)
         {
@@ -23,7 +35,7 @@ public class ClimbingController : MonoBehaviour
         {
             velocity += rightController.DeviceVelocity;
         }
-        //print(velocity);
-        myRigidbody.AddForce(-velocity);
+
+        playerController.lockedVelocity = new Vector3(velocity.x, -velocity.y, -velocity.z);
     }
 }

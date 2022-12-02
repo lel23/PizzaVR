@@ -9,6 +9,7 @@ public class LeftShooter: Shooter
             return;
         }
         EnableShooter();
+        _shooterHasLock = true;
         base.FireShooter();
     }
 

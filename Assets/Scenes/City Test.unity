@@ -986,7 +986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftController: {fileID: 1202310140}
   rightController: {fileID: 774171954}
-  myRigidbody: {fileID: 665706801}
+  playerController: {fileID: 665706803}
 --- !u!114 &665706803
 MonoBehaviour:
   m_ObjectHideFlags: 0
