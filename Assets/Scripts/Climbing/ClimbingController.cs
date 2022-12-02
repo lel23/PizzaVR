@@ -36,6 +36,6 @@ public class ClimbingController : MonoBehaviour
             velocity += rightController.DeviceVelocity;
         }
 
-        playerController.lockedVelocity = new Vector3(velocity.x, -velocity.y, -velocity.z);
+        playerController.lockedVelocity = -velocity;
     }
 }
