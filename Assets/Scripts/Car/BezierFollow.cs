@@ -6,8 +6,11 @@ using UnityEngine;
 
 public class BezierFollow : MonoBehaviour
 {
+    //[SerializeField]
+    private List<Transform> routes;
+
     [SerializeField]
-    private Transform[] routes;
+    private GameObject fullRoute;
 
     private int routeToGo;
 
@@ -19,15 +22,18 @@ public class BezierFollow : MonoBehaviour
 
     private bool coroutineAllowed;
 
-    // Start is called before the first frame update
     void Start()
     {
+        routes = new List<Transform>();
+        for (int i = 0; i < fullRoute.transform.childCount; i++)
+        {
+            routes.Add(fullRoute.transform.GetChild(i).gameObject.transform);
+        }
         routeToGo = 0;
         tParam = 0f;
         coroutineAllowed = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (coroutineAllowed)
@@ -60,7 +66,7 @@ public class BezierFollow : MonoBehaviour
         speedModifier = speedModifier * 0.90f;
         routeToGo += 1;
 
-        if (routeToGo > routes.Length - 1)
+        if (routeToGo > routes.Count - 1)
         {
             routeToGo = 0;
         }
