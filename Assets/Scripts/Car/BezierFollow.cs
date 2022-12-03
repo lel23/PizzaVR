@@ -12,6 +12,8 @@ public class BezierFollow : MonoBehaviour
     [SerializeField]
     private GameObject fullRoute;
 
+    public int routeOffset;
+
     private int routeToGo;
 
     private float tParam;
@@ -25,10 +27,15 @@ public class BezierFollow : MonoBehaviour
     void Start()
     {
         routes = new List<Transform>();
-        for (int i = 0; i < fullRoute.transform.childCount; i++)
+        for (int i = routeOffset; i < fullRoute.transform.childCount - routeOffset; i++)
         {
             routes.Add(fullRoute.transform.GetChild(i).gameObject.transform);
+            if (i == fullRoute.transform.childCount)
+            {
+                i = 0;
+            }
         }
+
         routeToGo = 0;
         tParam = 0f;
         coroutineAllowed = true;
