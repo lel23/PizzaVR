@@ -29,11 +29,12 @@ public class BezierFollow : MonoBehaviour
         routes = new List<Transform>();
         for (int i = routeOffset; i < fullRoute.transform.childCount - routeOffset; i++)
         {
-            routes.Add(fullRoute.transform.GetChild(i).gameObject.transform);
             if (i == fullRoute.transform.childCount)
             {
                 i = 0;
             }
+            routes.Add(fullRoute.transform.GetChild(i).gameObject.transform);
+
         }
 
         routeToGo = 0;
