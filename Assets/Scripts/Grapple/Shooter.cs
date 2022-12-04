@@ -71,8 +71,11 @@ public class Shooter : MonoBehaviour
         }
         
         RaycastHit hit;
+        bool raycastHit = Physics.Raycast(rayOrigin.transform.position, rayOrigin.transform.forward, out hit,
+            maxRayDistance, attachableLayers);
         
-        if (!Physics.Raycast(rayOrigin.transform.position, rayOrigin.transform.forward, out hit, maxRayDistance, attachableLayers))
+        //Check to see if raycast hits desired layers.
+        if (!raycastHit )//|| attachableLayers != (attachableLayers | (1 << hit.collider.gameObject.layer)))
         {
             return;
         }
