@@ -12,6 +12,7 @@ public class ClimbingObject : MonoBehaviour
 
     public GameObject playerObject;
     private Transform _playerParentDefault;
+    public ClimbingObject otherHand;
 
     public Vector3 DeviceVelocity { get; set; } = Vector3.zero;
 
@@ -44,6 +45,10 @@ public class ClimbingObject : MonoBehaviour
             return;
         }
         isLocked = false;
-        playerObject.transform.parent = _playerParentDefault;
+        if (!otherHand.isLocked)
+        {
+            playerObject.transform.parent = _playerParentDefault;    
+        }
+        
     }
 }
