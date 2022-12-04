@@ -7,7 +7,7 @@ using UnityEngine;
 public class BezierFollow : MonoBehaviour
 {
     //[SerializeField]
-    private List<Transform> routes;
+    public List<Transform> routes;
 
     [SerializeField]
     private GameObject fullRoute;
@@ -27,13 +27,19 @@ public class BezierFollow : MonoBehaviour
     void Start()
     {
         routes = new List<Transform>();
-        for (int i = routeOffset; i < fullRoute.transform.childCount - routeOffset; i++)
+        int routeNum = routeOffset;
+
+        // add all the child route segments to the route (one iteration of the loop per segment)
+        for (int i = 0; i < fullRoute.transform.childCount; i++)
         {
-            if (i == fullRoute.transform.childCount - 1)
+            routes.Add(fullRoute.transform.GetChild(routeNum).gameObject.transform);
+            routeNum += 1;
+
+            // when we surpass the number of routes, loop back to the first route
+            if (routeNum == fullRoute.transform.childCount)
             {
-                i = 0;
+                routeNum = 0;
             }
-            routes.Add(fullRoute.transform.GetChild(i).gameObject.transform);
 
         }
 
