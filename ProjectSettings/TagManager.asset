@@ -6,11 +6,13 @@ TagManager:
   tags:
   - PizzaBox
   - PizzaRecipient
+  - StreetLight
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - Grabbable

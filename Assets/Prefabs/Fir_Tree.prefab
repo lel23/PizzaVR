@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3205596375648724600}
   - component: {fileID: 3205596375650018904}
   - component: {fileID: 3205596375651148952}
+  - component: {fileID: 9019773174910684716}
   m_Layer: 0
   m_Name: Fir_Tree
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9019773174910684716
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205596375648959064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 7a39949e8d16c8d429b5bc411509a444, type: 3}
