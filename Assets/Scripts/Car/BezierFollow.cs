@@ -29,7 +29,7 @@ public class BezierFollow : MonoBehaviour
         routes = new List<Transform>();
         for (int i = routeOffset; i < fullRoute.transform.childCount - routeOffset; i++)
         {
-            if (i == fullRoute.transform.childCount)
+            if (i == fullRoute.transform.childCount - 1)
             {
                 i = 0;
             }
