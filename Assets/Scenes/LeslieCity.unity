@@ -14954,6 +14954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457bbeaa5df4e364087a7c70230d1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routes: []
   fullRoute: {fileID: 1978285660}
   routeOffset: 0
   speedModifier: 0.4
@@ -16733,6 +16734,51 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5506999454179428538, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454179428539, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716608, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716609, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716610, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716610, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716611, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716632, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506999454509716636, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5506999456177511427, guid: b0ab1773cfbae804688639366ea83068,
         type: 3}
       propertyPath: m_RootOrder
@@ -16741,7 +16787,7 @@ PrefabInstance:
     - target: {fileID: 5506999456177511427, guid: b0ab1773cfbae804688639366ea83068,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -420.1
+      value: -365.5
       objectReference: {fileID: 0}
     - target: {fileID: 5506999456177511427, guid: b0ab1773cfbae804688639366ea83068,
         type: 3}
@@ -16751,7 +16797,7 @@ PrefabInstance:
     - target: {fileID: 5506999456177511427, guid: b0ab1773cfbae804688639366ea83068,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -551.4
+      value: -577.6
       objectReference: {fileID: 0}
     - target: {fileID: 5506999456177511427, guid: b0ab1773cfbae804688639366ea83068,
         type: 3}
@@ -16792,6 +16838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180882870264690438, guid: b0ab1773cfbae804688639366ea83068,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -22173,6 +22224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457bbeaa5df4e364087a7c70230d1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routes: []
   fullRoute: {fileID: 1007570329}
   routeOffset: 0
   speedModifier: 0.8
@@ -23862,6 +23914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457bbeaa5df4e364087a7c70230d1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routes: []
   fullRoute: {fileID: 1978285660}
   routeOffset: 2
   speedModifier: 0.4
@@ -28414,6 +28467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457bbeaa5df4e364087a7c70230d1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  routes: []
   fullRoute: {fileID: 1542988780}
   routeOffset: 0
   speedModifier: 0.3
