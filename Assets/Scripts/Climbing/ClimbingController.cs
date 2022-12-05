@@ -7,6 +7,8 @@ public class ClimbingController : MonoBehaviour
 
     public PlayerController playerController;
 
+    public Transform playerTranform;
+
     private bool _climbingControllerHoldsLock;
     private void Update()
     {
@@ -36,6 +38,6 @@ public class ClimbingController : MonoBehaviour
             velocity += rightController.DeviceVelocity;
         }
 
-        playerController.lockedVelocity = -velocity;
+        playerController.lockedVelocity = playerTranform.TransformDirection(-velocity);
     }
 }
