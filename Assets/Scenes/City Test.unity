@@ -1215,6 +1215,7 @@ MonoBehaviour:
   leftShooter: {fileID: 1202310141}
   grappleSpeed: 6
   playerController: {fileID: 665706803}
+  minGrappleSize: 0.15
 --- !u!136 &665706800
 CapsuleCollider:
   m_ObjectHideFlags: 0

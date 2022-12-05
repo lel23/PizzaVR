@@ -17,6 +17,8 @@ public class GrappleController : MonoBehaviour
     public PlayerController playerController;
 
     private bool _grappleHoldsLock = false;
+
+    public float minGrappleSize = 0.2f;
     
     private void Update()
     {
@@ -39,12 +41,14 @@ public class GrappleController : MonoBehaviour
         Vector3 grappleForceRight = Vector3.zero;
         Vector3 grappleForceLeft = Vector3.zero;
 
-        if (rightShooter.shooterState == Shooter.ShooterState.Locked)
+        if (rightShooter.shooterState == Shooter.ShooterState.Locked && 
+            (Vector3.Distance(rightShooter.DestinationMarker.transform.position, rightShooter.transform.position) > minGrappleSize) || rightShooter.JoystickValue.y < 0)
         {
             var grappleDirection = (rightShooter.DestinationMarker.transform.position - rightShooter.rayOrigin.transform.position).normalized;
             grappleForceRight = grappleDirection * rightShooter.JoystickValue.y * grappleSpeed;
         }
-        if (leftShooter.shooterState == Shooter.ShooterState.Locked)
+        if (leftShooter.shooterState == Shooter.ShooterState.Locked && 
+            (Vector3.Distance(leftShooter.DestinationMarker.transform.position, leftShooter.transform.position) > minGrappleSize) || leftShooter.JoystickValue.y < 0)
         {
             var grappleDirection = (leftShooter.DestinationMarker.transform.position - leftShooter.rayOrigin.transform.position).normalized;
             grappleForceLeft = grappleDirection * leftShooter.JoystickValue.y * grappleSpeed;
