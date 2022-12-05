@@ -13,8 +13,12 @@ public class PlayerColliderController : MonoBehaviour
     
     public float minHeight;
     public float maxHeight;
+    public float climbingHeight;
 
     public float headBuffer;
+
+    public ClimbingObject leftClimbingObject;
+    public ClimbingObject rightClimbingObject;
 
     private void Start()
     {
@@ -27,6 +31,14 @@ public class PlayerColliderController : MonoBehaviour
 
         Vector3 center = myXROrigin.CameraInOriginSpacePos;
         center.y = height / 2f + headBuffer;
+        
+        
+        if (leftClimbingObject.isLocked || rightClimbingObject.isLocked)
+        {
+            height = climbingHeight;
+            center = myXROrigin.CameraInOriginSpacePos;
+            center.y += headBuffer;
+        }
 
         myCollider.height = height;
         myCollider.center = center;

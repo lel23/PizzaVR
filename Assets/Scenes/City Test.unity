@@ -1419,7 +1419,10 @@ MonoBehaviour:
   myLocomotionProvider: {fileID: 1443264353}
   minHeight: 1
   maxHeight: 2
+  climbingHeight: 0.5
   headBuffer: 0.1
+  leftClimbingObject: {fileID: 1202310140}
+  rightClimbingObject: {fileID: 774171954}
 --- !u!1 &774171946
 GameObject:
   m_ObjectHideFlags: 0

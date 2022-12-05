@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ClimbingObject : MonoBehaviour
 {
@@ -11,9 +12,8 @@ public class ClimbingObject : MonoBehaviour
     public LayerMask climbableLayerMask;
 
     public GameObject playerObject;
-    private Transform _playerParentDefault;
-    public ClimbingObject otherHand;
 
+    public ClimbingObject otherHand;
     public Vector3 DeviceVelocity { get; set; } = Vector3.zero;
 
     private GameObject _overlapObject;
@@ -21,10 +21,6 @@ public class ClimbingObject : MonoBehaviour
 
     protected bool _objectHasLock = false;
 
-    private void Start()
-    {
-        _playerParentDefault = playerObject.transform.parent;
-    }
     public virtual void TryClimb()
     {
         Collider[] colliders = Physics.OverlapBox(myCollider.transform.position, myCollider.size/2.0f, myCollider.transform.rotation, climbableLayerMask);
@@ -34,7 +30,7 @@ public class ClimbingObject : MonoBehaviour
         }
 
         _overlapObject = colliders[0].gameObject;
-        playerObject.transform.parent = _overlapObject.transform;
+        playerObject.transform.SetParent(_overlapObject.transform, true);
         isLocked = true;
     }
 
@@ -47,8 +43,8 @@ public class ClimbingObject : MonoBehaviour
         isLocked = false;
         if (!otherHand.isLocked)
         {
-            playerObject.transform.parent = _playerParentDefault;    
+            playerObject.transform.parent = null;    
         }
-        
+
     }
 }
