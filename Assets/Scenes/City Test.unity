@@ -1260,6 +1260,7 @@ MonoBehaviour:
   leftController: {fileID: 1202310140}
   rightController: {fileID: 774171954}
   playerController: {fileID: 665706803}
+  playerTranform: {fileID: 665706796}
 --- !u!114 &665706803
 MonoBehaviour:
   m_ObjectHideFlags: 0
