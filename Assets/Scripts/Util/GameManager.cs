@@ -6,13 +6,18 @@ using System.Collections.Specialized;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    private GameObject allPizzaRecipients;
+
     private List<GameObject> pizzaRecipients;
-    private OrderedDictionary pizzasDelivered;
+    private Dictionary<GameObject, bool> pizzasDelivered;
     void Start()
     {
-
+        for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
+        {
+            pizzaRecipients.Add(allPizzaRecipients.transform.GetChild(i).gameObject);
+        }
         // initialize an ordered dictionary that stores all data about pizzas delivered
-        pizzasDelivered = new OrderedDictionary();
+        pizzasDelivered = new Dictionary<GameObject, bool>();
         foreach (GameObject pizzaRecipient in pizzaRecipients)
         {
             pizzasDelivered.Add(pizzaRecipient, false);
@@ -27,6 +32,12 @@ public class GameManager : MonoBehaviour
 
     public Vector3 getNextPizzaRecipientPosition()
     {
-        
+        return pizzaRecipients[0].transform.position;
+    }
+
+    public void getPizza(GameObject recipient)
+    {
+        pizzasDelivered[recipient] = true;
+        pizzaRecipients.Remove(recipient);
     }
 }
