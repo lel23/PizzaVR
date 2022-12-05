@@ -1,18 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Specialized;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private GameObject allPizzaRecipients;
+
+    private List<GameObject> pizzaRecipients;
+    private Dictionary<GameObject, bool> pizzasDelivered;
     void Start()
     {
-        
+        for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
+        {
+            pizzaRecipients.Add(allPizzaRecipients.transform.GetChild(i).gameObject);
+        }
+        // initialize an ordered dictionary that stores all data about pizzas delivered
+        pizzasDelivered = new Dictionary<GameObject, bool>();
+        foreach (GameObject pizzaRecipient in pizzaRecipients)
+        {
+            pizzasDelivered.Add(pizzaRecipient, false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public Vector3 getNextPizzaRecipientPosition()
+    {
+        return pizzaRecipients[0].transform.position;
+    }
+
+    public void getPizza(GameObject recipient)
+    {
+        pizzasDelivered[recipient] = true;
+        pizzaRecipients.Remove(recipient);
     }
 }
