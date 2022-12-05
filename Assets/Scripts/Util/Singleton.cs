@@ -7,6 +7,7 @@ public class Singleton : MonoBehaviour
 {
     public static Singleton Instance { get; private set; }
     public AudioManager AudioManager { get; private set; }
+    public GameManager GameManager { get; private set; }
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -16,5 +17,6 @@ public class Singleton : MonoBehaviour
         }
         Instance = this;
         AudioManager = GetComponentInChildren<AudioManager>();
+        GameManager = GetComponent<GameManager>();
     }
 }
