@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject allPizzaRecipients;
 
-    private List<GameObject> pizzaRecipients;
+    public List<GameObject> pizzaRecipients;
     private Dictionary<GameObject, bool> pizzasDelivered;
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
         {
@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 getNextPizzaRecipientPosition()
     {
+        Debug.Log("method called");
+        Debug.Log(pizzaRecipients[0].transform.position);
         return pizzaRecipients[0].transform.position;
     }
 
