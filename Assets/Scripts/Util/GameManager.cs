@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> pizzaRecipients;
     private Dictionary<GameObject, bool> pizzasDelivered;
-    void Awake()
+
+    // this gets set by the VRManager script
+    public bool isVR;
+    void OnEnable()
     {
         for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
         {
@@ -32,8 +35,6 @@ public class GameManager : MonoBehaviour
 
     public Vector3 getNextPizzaRecipientPosition()
     {
-        Debug.Log("method called");
-        Debug.Log(pizzaRecipients[0].transform.position);
         return pizzaRecipients[0].transform.position;
     }
 

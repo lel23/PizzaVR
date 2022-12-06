@@ -23,7 +23,6 @@ public class Pizza : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collided");
         // if the pizza recipient collides with the pizza box (i.e. the player hits their target)
         if (collision.collider.CompareTag("PizzaRecipient"))
         {

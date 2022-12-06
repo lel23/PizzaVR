@@ -35,7 +35,7 @@ public class VRManager : MonoBehaviour
     #endregion
 
     #region Set Status
-    //Trys to set the status to the desired status and returns the new status. 
+    //Tries to set the status to the desired status and returns the new status. 
 
     public bool SetVRActiveStatus(bool status)
     {
@@ -59,12 +59,14 @@ public class VRManager : MonoBehaviour
     {
         Debug.Log("VR Mode Loaded");
         IsVRActive = true;
+        Singleton.Instance.GameManager.isVR = true;
     }
 
     public void EnableDesktop()
     {
         Debug.Log("Desktop Mode Loaded");
         IsVRActive = false;
+        Singleton.Instance.GameManager.isVR = false;
     }
     #endregion
 

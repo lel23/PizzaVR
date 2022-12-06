@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class ArrowMovement : MonoBehaviour
 {
-    public Camera playerCamera;
+    private GameObject player;
+    [SerializeField]
+    private GameObject VRPlayer;
+    [SerializeField]
+    private GameObject desktopPlayer;
     public Vector3 playerCameraPosition;
     public Vector3 nextPizzaRecipientPosition;
-    public Vector3 targetMinusOriginNormalized;
+    public Vector3 dir;
     void Start()
     {
+        if (Singleton.Instance.GameManager.isVR)
+        {
+            player = VRPlayer;
+        }
+        else
+        {
+            player = desktopPlayer;
+        }
         nextPizzaRecipientPosition = Singleton.Instance.GameManager.getNextPizzaRecipientPosition();
-        playerCameraPosition = playerCamera.transform.position;
     }
 
     void Update()
     {
-        playerCameraPosition = playerCamera.transform.position;
-        targetMinusOriginNormalized = Vector3.Normalize(nextPizzaRecipientPosition - playerCameraPosition);
-        transform.rotation = new Quaternion(targetMinusOriginNormalized.x, targetMinusOriginNormalized.y, targetMinusOriginNormalized.z, 1);
+        playerCameraPosition = player.transform.position;
+        dir = Vector3.Normalize(nextPizzaRecipientPosition - playerCameraPosition);
+        transform.rotation = new Quaternion(dir.x - player.transform.rotation.x, dir.y - player.transform.rotation.y, dir.z - player.transform.rotation.z, 1);
     }
 
     void updatePizzaRecipient()
