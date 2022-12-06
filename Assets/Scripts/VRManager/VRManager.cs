@@ -30,6 +30,11 @@ public class VRManager : MonoBehaviour
         if (!IsVRActive && IsHeadsetDetected())
         {
             IsVRActive = true;
+            Singleton.Instance.GameManager.isVR = true;
+        }
+        else
+        {
+            Singleton.Instance.GameManager.isVR = false;
         }
     }
     #endregion
@@ -47,10 +52,11 @@ public class VRManager : MonoBehaviour
         if (status && IsHeadsetDetected(true))
         {
             EnableVR();
+            
         }
         else
         {
-            EnableDesktop();    
+            EnableDesktop();
         }
         return IsVRActive;
     }
@@ -59,14 +65,12 @@ public class VRManager : MonoBehaviour
     {
         Debug.Log("VR Mode Loaded");
         IsVRActive = true;
-        Singleton.Instance.GameManager.isVR = true;
     }
 
     public void EnableDesktop()
     {
         Debug.Log("Desktop Mode Loaded");
         IsVRActive = false;
-        Singleton.Instance.GameManager.isVR = false;
     }
     #endregion
 
