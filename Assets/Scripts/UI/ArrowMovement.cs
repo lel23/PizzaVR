@@ -29,7 +29,7 @@ public class ArrowMovement : MonoBehaviour
     {
         playerCameraPosition = player.transform.position;
         dir = Vector3.Normalize(nextPizzaRecipientPosition - playerCameraPosition);
-        transform.rotation = new Quaternion(dir.x, dir.y * player.transform.rotation.y, dir.z, 1);
+        transform.rotation = new Quaternion(dir.x, dir.y, dir.z, 1);
     }
 
     void updatePizzaRecipient()
