@@ -9,7 +9,7 @@ public class ArrowMovement : MonoBehaviour
     private GameObject VRPlayer;
     [SerializeField]
     private GameObject desktopPlayer;
-    public Vector3 playerCameraPosition;
+    private Transform playerCameraTransform;
     public Vector3 nextPizzaRecipientPosition;
     public Vector3 dir;
     void Start()
@@ -23,13 +23,13 @@ public class ArrowMovement : MonoBehaviour
             player = desktopPlayer;
         }
         nextPizzaRecipientPosition = Singleton.Instance.GameManager.getNextPizzaRecipientPosition();
+        playerCameraTransform = player.transform;
     }
 
     void Update()
     {
-        playerCameraPosition = player.transform.position;
-        dir = Vector3.Normalize(nextPizzaRecipientPosition - playerCameraPosition);
-        transform.rotation = new Quaternion(dir.x, dir.y, dir.z, 1);
+        dir = Vector3.Normalize(nextPizzaRecipientPosition - player.transform.position);
+        player.transform.position = playerCameraTransform.TransformDirection(dir);
     }
 
     void updatePizzaRecipient()
