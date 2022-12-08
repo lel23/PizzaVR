@@ -29,7 +29,7 @@ public class ArrowMovement : MonoBehaviour
     void Update()
     {
         dir = Vector3.Normalize(nextPizzaRecipientPosition - player.transform.position);
-        player.transform.position = playerCameraTransform.TransformDirection(dir);
+        transform.LookAt(transform.TransformDirection(dir));
     }
 
     void updatePizzaRecipient()

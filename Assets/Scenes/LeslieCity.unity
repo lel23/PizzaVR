@@ -19194,7 +19194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VRPlayer: {fileID: 1935976910}
   desktopPlayer: {fileID: 1029659459}
-  playerCameraPosition: {x: 0, y: 0, z: 0}
   nextPizzaRecipientPosition: {x: 0, y: 0, z: 0}
   dir: {x: 0, y: 0, z: 0}
 --- !u!1001 &1104375607
