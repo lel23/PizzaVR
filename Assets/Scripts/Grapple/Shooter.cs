@@ -20,6 +20,7 @@ public class Shooter : MonoBehaviour
     [HideInInspector] public Vector2 JoystickValue { get; set; }
     //[HideInInspector] public Vector3 DestinationCoords { get; set; }
     [HideInInspector] public GameObject DestinationMarker { get; set; }
+    private bool destMarkerSet = false;
     [HideInInspector] public Vector3 OriginCoords { get; set;}
     [HideInInspector] public ShooterState shooterState = ShooterState.Inactive;
 
@@ -89,6 +90,7 @@ public class Shooter : MonoBehaviour
         DestinationMarker = new GameObject();
         DestinationMarker.transform.parent = hit.collider.transform;
         DestinationMarker.transform.localPosition = hit.collider.transform.InverseTransformPoint(hit.point);
+        destMarkerSet = true;
         ActivateShooter();
     }
 
