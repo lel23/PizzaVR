@@ -8,9 +8,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject allPizzaRecipients;
 
-    private List<GameObject> pizzaRecipients;
+    public List<GameObject> pizzaRecipients;
     private Dictionary<GameObject, bool> pizzasDelivered;
-    void Start()
+
+    // this gets set by the VRManager script
+    public bool isVR;
+    void OnEnable()
     {
         for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
         {

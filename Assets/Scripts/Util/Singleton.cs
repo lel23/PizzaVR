@@ -10,13 +10,15 @@ public class Singleton : MonoBehaviour
     public GameManager GameManager { get; private set; }
     private void Awake()
     {
+        //DontDestroyOnLoad(gameObject);
         if (Instance != null && Instance != this)
         {
             Destroy(this);
             return;
         }
+        
         Instance = this;
         AudioManager = GetComponentInChildren<AudioManager>();
-        GameManager = GetComponent<GameManager>();
+        GameManager = GetComponentInChildren<GameManager>();
     }
 }

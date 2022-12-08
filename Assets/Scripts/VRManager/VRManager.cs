@@ -30,12 +30,17 @@ public class VRManager : MonoBehaviour
         if (!IsVRActive && IsHeadsetDetected())
         {
             IsVRActive = true;
+            Singleton.Instance.GameManager.isVR = true;
+        }
+        else
+        {
+            Singleton.Instance.GameManager.isVR = false;
         }
     }
     #endregion
 
     #region Set Status
-    //Trys to set the status to the desired status and returns the new status. 
+    //Tries to set the status to the desired status and returns the new status. 
 
     public bool SetVRActiveStatus(bool status)
     {
@@ -47,10 +52,11 @@ public class VRManager : MonoBehaviour
         if (status && IsHeadsetDetected(true))
         {
             EnableVR();
+            
         }
         else
         {
-            EnableDesktop();    
+            EnableDesktop();
         }
         return IsVRActive;
     }
