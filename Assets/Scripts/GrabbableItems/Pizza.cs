@@ -24,7 +24,7 @@ public class Pizza : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // if the pizza recipient collides with the pizza box (i.e. the player hits their target)
-        if (collision.collider.CompareTag("PizzaRecipient"))
+        if (collision.collider.CompareTag("PizzaRecipient") && Singleton.Instance.GameManager)
         {
             Debug.Log("collided with pizza guy");
             // make the pizza box float front of the recipient (so it looks like they're holding it)
@@ -33,9 +33,14 @@ public class Pizza : MonoBehaviour
             Vector3 recipientPosition = collision.collider.gameObject.transform.position;
             Vector3 targetPosition = new Vector3(recipientPosition.x, recipientPosition.y, recipientPosition.z - 2);
             StartCoroutine(floatTowards(targetPosition, floatDuration));
-
             Quaternion targetRotation = new Quaternion(0, 0, 0, 1);
             StartCoroutine(rotateTowards(targetRotation, floatDuration));
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            // change the color of the recipient
+            collision.collider.GetComponent<PizzaRecipient>().changeColor();
+
+            // update game manager
+            Singleton.Instance.GameManager.getPizza(collision.collider.gameObject);
 
             Debug.Log("started coroutines");
 
