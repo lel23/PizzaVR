@@ -26,7 +26,7 @@ public class Speak : MonoBehaviour
         while (true)
         {
             currentLine = voicelines[Random.Range(0, voicelines.Length - 1)];
-            audioSource.pitch = Random.Range(-3.0f, 3.0f);
+            audioSource.pitch = Random.Range(-1.5f, 1.5f);
             audioSource.clip = currentLine;
             Debug.Log("said voiceline");
             audioSource.Play();
