@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Specialized;
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     // this gets set by the VRManager script
     public bool isVR;
+
+    public Button playButton;
     void OnEnable()
     {
         for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
@@ -43,5 +46,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log(!pizzasDelivered[recipient]);
         return !pizzasDelivered[recipient];
+    }
+
+    public void startGame()
+    {
+        SceneManager.LoadScene("LeslieCity");
     }
 }
