@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     // this gets set by the VRManager script
     public bool isVR;
 
-    public Button playButton;
     void OnEnable()
     {
         for (int i = 0; i < allPizzaRecipients.transform.childCount; i++)
@@ -50,6 +49,6 @@ public class GameManager : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene("LeslieCity");
+        SceneManager.LoadScene("New Leslie City");
     }
 }
