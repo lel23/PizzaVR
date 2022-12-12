@@ -299,156 +299,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voicelines:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
+  - {fileID: 8300000, guid: 1352936e3728a2c41897c41bb717aecb, type: 3}
+  - {fileID: 8300000, guid: 3b33450ca723a484a94c45165f463527, type: 3}
+  - {fileID: 8300000, guid: cb784025d6c9fce4ea318ddda047d1e4, type: 3}
+  - {fileID: 8300000, guid: 18c7a79e71fdbd147a885c165f37327c, type: 3}
+  - {fileID: 8300000, guid: a59d60f96b7346c4495b7c1fe6237980, type: 3}
+  - {fileID: 8300000, guid: 929cb1724f5d3414284614c9d54b51c2, type: 3}
+  - {fileID: 8300000, guid: f1c027af127b0d0439b114447fd0aab6, type: 3}
+  - {fileID: 8300000, guid: 024636bdd7494f844aa094ceae5cdc02, type: 3}
+  - {fileID: 8300000, guid: 5b4ff071e9e9df5468f457fe9812f6e6, type: 3}
+  - {fileID: 8300000, guid: 03fce366e2749cf4f9533fe5e0ab7a7c, type: 3}
+  - {fileID: 8300000, guid: 3922a3b15e4aeee4487e4d0178045529, type: 3}
+  - {fileID: 8300000, guid: 0eaeb56db1dd42948b8bda8c03b06cdd, type: 3}
+  - {fileID: 8300000, guid: d03c5e7367091b440a9f19b19017a06f, type: 3}
+  - {fileID: 8300000, guid: d5fe0051532f90740b030c189626d11e, type: 3}
+  - {fileID: 8300000, guid: 54453898e3cbdb84eb53fad682ac1fc3, type: 3}
 --- !u!1 &8140609765043179735
 GameObject:
   m_ObjectHideFlags: 0

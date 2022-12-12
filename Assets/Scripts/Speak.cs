@@ -6,15 +6,15 @@ public class Speak : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    public Sound[] voicelines;
+    public AudioClip[] voicelines;
 
-    private Sound currentLine;
+    private AudioClip currentLine;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 1.0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         StartCoroutine(sayVoiceline());
@@ -24,6 +24,8 @@ public class Speak : MonoBehaviour
     {
         currentLine = voicelines[Random.Range(0, voicelines.Length - 1)];
         audioSource.pitch = Random.Range(-3.0f, 3.0f);
-        yield return new WaitForSeconds(currentLine.clip.length + Random.Range(0.0f, 60.0f));
+        audioSource.clip = currentLine;
+        audioSource.Play();
+        yield return new WaitForSeconds(currentLine.length + Random.Range(0.0f, 60.0f));
     }
 }
