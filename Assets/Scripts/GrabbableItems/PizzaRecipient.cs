@@ -14,6 +14,8 @@ public class PizzaRecipient : MonoBehaviour
 
     private AudioSource audio;
 
+    public AudioClip yaySound;
+
     void Start()
     {
         head = transform.GetChild(0).gameObject;
@@ -36,6 +38,7 @@ public class PizzaRecipient : MonoBehaviour
 
     public void makeYayNoise()
     {
+        audio.clip = yaySound;
         audio.Play();
     }
     
