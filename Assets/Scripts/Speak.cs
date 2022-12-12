@@ -17,10 +17,7 @@ public class Speak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (true)
-        {
-            StartCoroutine(sayVoiceline());
-        }   
+        StartCoroutine(sayVoiceline());
     }
 
     IEnumerator sayVoiceline()
