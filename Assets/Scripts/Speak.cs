@@ -6,6 +6,8 @@ public class Speak : MonoBehaviour
 {
     private AudioSource audioSource;
 
+    public bool isGod;
+
     public AudioClip[] voicelines;
 
     private AudioClip currentLine;
@@ -26,7 +28,17 @@ public class Speak : MonoBehaviour
         while (true)
         {
             currentLine = voicelines[Random.Range(0, voicelines.Length - 1)];
-            audioSource.pitch = Random.Range(-1.5f, 1.5f);
+            
+            // God has a low voice.
+            if (isGod)
+            {
+                audioSource.pitch = -3f;
+            }
+            else
+            {
+                audioSource.pitch = Random.Range(-1.5f, 1.5f);
+            }
+            
             audioSource.clip = currentLine;
             Debug.Log("said voiceline");
             audioSource.Play();
