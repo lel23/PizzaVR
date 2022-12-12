@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1384028130857303829}
   - component: {fileID: 7899112461026078860}
   - component: {fileID: 3262119469266897386}
+  - component: {fileID: 212914344730482165}
   m_Layer: 0
   m_Name: Person
   m_TagString: PizzaRecipient
@@ -285,6 +286,169 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &212914344730482165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177277177282517108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1 &8140609765043179735
 GameObject:
   m_ObjectHideFlags: 0

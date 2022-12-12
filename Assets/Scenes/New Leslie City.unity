@@ -2625,6 +2625,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -3356,6 +3361,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5360,6 +5370,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -7619,9 +7634,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &398813153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 398813152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &415194200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8169,6 +8195,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -9396,6 +9427,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -10193,6 +10229,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118803942336504558, guid: 24000a1fae4c4b34f93bd92f415075b9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10201,6 +10242,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &560303642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 560303641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565674694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12052,6 +12099,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.472
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6954618729591651621, guid: 24000a1fae4c4b34f93bd92f415075b9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12072,6 +12124,175 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 675667460}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &675667462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 675667460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &675667463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675667462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1001 &677363830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12689,6 +12910,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -14636,9 +14862,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &804899004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 804899003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &806681692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18675,9 +18912,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &986987698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 986987697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &988455996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19455,6 +19703,169 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 560303641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034802111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560303642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1001 &1036581790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19463,6 +19874,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -20475,6 +20891,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -24661,6 +25082,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -27085,6 +27511,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6954618729591651621, guid: 24000a1fae4c4b34f93bd92f415075b9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29506,6 +29937,182 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 986987697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1547866978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986987698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+--- !u!114 &1547866979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986987698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines: []
 --- !u!1 &1548363996
 GameObject:
   m_ObjectHideFlags: 0
@@ -30928,6 +31535,169 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 804899003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1605317532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804899004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1001 &1608540506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30936,6 +31706,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -32153,6 +32928,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -35947,9 +36727,183 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &1859441705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1859441704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859441706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859441705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1 &1859515455
 GameObject:
   m_ObjectHideFlags: 0
@@ -36071,6 +37025,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -40224,6 +41183,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -40464,9 +41428,183 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &1989724596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1989724595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1989724597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989724596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1 &1989799184
 GameObject:
   m_ObjectHideFlags: 0
@@ -42589,9 +43727,183 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5945318097898297761, guid: 24000a1fae4c4b34f93bd92f415075b9,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 24000a1fae4c4b34f93bd92f415075b9, type: 3}
+--- !u!1 &2072020032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2043979472173434943, guid: 24000a1fae4c4b34f93bd92f415075b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2072020031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2072020033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072020032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!1001 &2075832642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43658,6 +44970,169 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 398813152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106630780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398813153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85338f8c005bc4da72ada73aba61fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voicelines:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    spatialBlend: 0
+    dopplerLevel: 0
+    minDistance: 0
+    maxDistance: 0
+    source: {fileID: 0}
 --- !u!4 &2108124563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 100631177626346328, guid: c1e1f398cab58394cb2187fef2ffc46d,
@@ -44279,6 +45754,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder
@@ -44841,6 +46321,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 600376325}
     m_Modifications:
+    - target: {fileID: 3262119469266897386, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5721514103144736882, guid: c7b8e14ef043a9b43b9b1ffb0a099ec6,
         type: 3}
       propertyPath: m_RootOrder

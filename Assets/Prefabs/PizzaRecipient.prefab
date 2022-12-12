@@ -151,17 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMaterial: {fileID: 2100000, guid: a930bfc470fbdc14a8007aaa2bf37d1f, type: 2}
   endMaterial: {fileID: 2100000, guid: 459fc66c28b74494abd0bbdcea17da5d, type: 2}
-  yaySound:
-    name: 
-    clip: {fileID: 8300000, guid: 780f423f5b2fb804b9bc1c93e3a37810, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    spatialBlend: 0
-    dopplerLevel: 0
-    minDistance: 0
-    maxDistance: 0
-    source: {fileID: 0}
+  yaySound: {fileID: 8300000, guid: 780f423f5b2fb804b9bc1c93e3a37810, type: 3}
 --- !u!136 &7850457292091846494
 CapsuleCollider:
   m_ObjectHideFlags: 0
