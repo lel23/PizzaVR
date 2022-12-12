@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Rigid Body")] public Rigidbody myRigidBody;
 
+    public float jumpForce = 2.0f;
+    
     #region Motion Update
 
     [HideInInspector]
@@ -62,6 +64,17 @@ public class PlayerController : MonoBehaviour
     public void OnRightHandUnlock()
     {
         
+    }
+
+    public Transform groundedPoint;
+    public float groundedDistance = 0.2f;
+    public void OnJump()
+    {
+        print("Jump");
+        if (Physics.Raycast(groundedPoint.position  + new Vector3(0,0.15f,0), Vector3.down, groundedDistance) || Physics.Raycast(groundedPoint.position  + new Vector3(0,0.15f,0), Vector3.up, groundedDistance))
+        {
+            myRigidBody.velocity += new Vector3(0,jumpForce, 0);
+        }
     }
 
     #endregion

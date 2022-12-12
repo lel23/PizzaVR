@@ -21,6 +21,10 @@ public abstract class HandInput : MonoBehaviour
     public UnityEvent<Vector2> onJoystickUpdate;
     private Vector2 _lastJoystickValue;
 
+    public UnityEvent onPrimaryDown;
+    public UnityEvent onPrimaryUp;
+    private bool _lastPrimaryValue;
+
     public UnityEvent<Vector3> controllerVelocityTracker;
 
     private InputDevice _controller;
@@ -102,6 +106,26 @@ public abstract class HandInput : MonoBehaviour
                 }
 
                 _lastGripValue = gripValue;
+            }
+        }
+
+        bool primaryTouchValue;
+        if (_controller.TryGetFeatureValue(CommonUsages.primaryButton, out primaryTouchValue))
+        {
+            //See if button has changed
+            if (primaryTouchValue != _lastPrimaryValue)
+            {
+                //If down/up
+                if (primaryTouchValue && onPrimaryDown != null)
+                {
+                    onPrimaryDown.Invoke();
+                }
+                else if (onPrimaryUp != null)
+                {
+                    onPrimaryUp.Invoke();
+                }
+
+                _lastPrimaryValue = primaryTouchValue;
             }
         }
         
