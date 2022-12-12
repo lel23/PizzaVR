@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 4236060673106173191}
   - component: {fileID: 4236060673106173184}
   - component: {fileID: 4236060673106173190}
+  - component: {fileID: 2988713571052500802}
   m_Layer: 7
   m_Name: VRPlayer
   m_TagString: Untagged
@@ -179,7 +180,7 @@ Transform:
   - {fileID: 4236060674691964320}
   - {fileID: 4236060673062694033}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4236060673106173208
 MonoBehaviour:
@@ -424,6 +425,20 @@ MonoBehaviour:
   headBuffer: 0.1
   leftClimbingObject: {fileID: 4236060674716530639}
   rightClimbingObject: {fileID: 4236060673231540481}
+--- !u!114 &2988713571052500802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236060673106173209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc281da90cb92d469222af9523f2075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minY: -1
+  myRigidBody: {fileID: 4236060673106173186}
 --- !u!1 &4236060673231540505
 GameObject:
   m_ObjectHideFlags: 0
