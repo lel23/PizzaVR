@@ -12,6 +12,8 @@ public class PizzaRecipient : MonoBehaviour
     private GameObject head;
     private GameObject body;
 
+    private AudioSource audio;
+
     void Start()
     {
         head = transform.GetChild(0).gameObject;
@@ -21,6 +23,8 @@ public class PizzaRecipient : MonoBehaviour
         body.GetComponent<Renderer>().enabled = true;
         head.GetComponent<Renderer>().sharedMaterial = startMaterial;
         body.GetComponent<Renderer>().sharedMaterial = startMaterial;
+
+        audio = GetComponent<AudioSource>();
     }
 
     public void changeColor()
@@ -28,6 +32,11 @@ public class PizzaRecipient : MonoBehaviour
         Debug.Log("changed color");
         head.GetComponent<Renderer>().sharedMaterial = endMaterial;
         body.GetComponent<Renderer>().sharedMaterial = endMaterial;
+    }
+
+    public void makeYayNoise()
+    {
+        audio.Play();
     }
     
 

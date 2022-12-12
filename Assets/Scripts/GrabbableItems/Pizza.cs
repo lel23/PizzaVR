@@ -42,6 +42,8 @@ public class Pizza : MonoBehaviour
             // update game manager
             Singleton.Instance.GameManager.getPizza(collision.collider.gameObject);
 
+            // play the sound
+            collision.collider.GetComponent<PizzaRecipient>().makeYayNoise();
         }
     }
 

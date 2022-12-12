@@ -27,12 +27,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public Vector3 getNextPizzaRecipientPosition()
     {
         return pizzaRecipients[0].transform.position;
