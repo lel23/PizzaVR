@@ -13,11 +13,15 @@ public class Speak : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = 1.0f;
+        while (true)
+        {
+            StartCoroutine(sayVoiceline());
+        }
+        
     }
 
     void Update()
     {
-        StartCoroutine(sayVoiceline());
     }
 
     IEnumerator sayVoiceline()
