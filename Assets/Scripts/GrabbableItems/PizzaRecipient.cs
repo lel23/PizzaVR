@@ -38,7 +38,7 @@ public class PizzaRecipient : MonoBehaviour
 
     public void makeYayNoise()
     {
-        audio.clip = yaySound.clip;
+        audio.clip = yaySound;
         audio.Play();
     }
     
