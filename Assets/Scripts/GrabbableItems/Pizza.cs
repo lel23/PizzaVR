@@ -24,7 +24,7 @@ public class Pizza : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // if the pizza recipient collides with the pizza box (i.e. the player hits their target)
-        if (collision.collider.CompareTag("PizzaRecipient") && Singleton.Instance.GameManager)
+        if (collision.collider.CompareTag("PizzaRecipient") && Singleton.Instance.GameManager.isValidRecipient(collision.collider.gameObject))
         {
             Debug.Log("collided with pizza guy");
             // make the pizza box float front of the recipient (so it looks like they're holding it)
@@ -42,8 +42,8 @@ public class Pizza : MonoBehaviour
             // update game manager
             Singleton.Instance.GameManager.getPizza(collision.collider.gameObject);
 
-            Debug.Log("started coroutines");
-
+            // play the sound
+            collision.collider.GetComponent<PizzaRecipient>().makeYayNoise();
         }
     }
 

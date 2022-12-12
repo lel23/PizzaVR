@@ -23,14 +23,8 @@ public class GameManager : MonoBehaviour
         pizzasDelivered = new Dictionary<GameObject, bool>();
         foreach (GameObject pizzaRecipient in pizzaRecipients)
         {
-            pizzasDelivered.Add(pizzaRecipient, false);
+            pizzasDelivered[pizzaRecipient] = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public Vector3 getNextPizzaRecipientPosition()
@@ -42,5 +36,12 @@ public class GameManager : MonoBehaviour
     {
         pizzasDelivered[recipient] = true;
         pizzaRecipients.Remove(recipient);
+    }
+
+    // returns True if the recipient has not been delivered to yet, false otherwise
+    public bool isValidRecipient(GameObject recipient)
+    {
+        Debug.Log(!pizzasDelivered[recipient]);
+        return !pizzasDelivered[recipient];
     }
 }
